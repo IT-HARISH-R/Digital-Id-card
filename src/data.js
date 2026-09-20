@@ -96,6 +96,20 @@ const users = [
     gender: "female",
     profileImage: "",
     Verification_Date: "01/09/2025"
+  },
+  {
+    id: "CT008",
+    name: "DIVAKAR D",
+    Role: "Student",
+    dob: "29/08/2007",
+    companyName: "College Digital ID",
+    Address: "64/788 Palikadai, omalur, 97537",
+    Mail_Id: "divo@gmail.com",
+    Blood_group: "A -ve",
+    Phone_number: "+91 9983653689",
+    gender: "male",
+    profileImage: "",
+    Verification_Date: "01/09/2025"
   }
 ];
 
