@@ -13,7 +13,7 @@ const Home = () => {
     const filteredUsers = users.filter(user =>
         user.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         user.id.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        user.Role.toLowerCase().includes(searchTerm.toLowerCase())
+        (user.Role && user.Role.toLowerCase().includes(searchTerm.toLowerCase()))
     );
 
     return (
@@ -22,10 +22,10 @@ const Home = () => {
             <div className="flex flex-col items-center w-full pt-8">
                 <div className="text-center">
                     <h1 className="text-3xl md:text-4xl font-bold text-blue-800 mb-2">
-                        Employee Identity Portal
+                        Digital ID Card Portal
                     </h1>
                     <p className="text-gray-600 max-w-2xl pb-4 text-sm md:text-lg">
-                        Verify employee identities with our secure verification system. Select an employee below to begin the verification process.
+                        Verify student identities with our digital ID verification system. Select a cardholder below to view details.
                     </p>
                 </div>
             </div>
@@ -52,11 +52,11 @@ const Home = () => {
             <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
                 <div className="bg-white rounded-xl p-4 shadow-md text-center">
                     <div className="text-3xl font-bold text-blue-600">{users.length}</div>
-                    <div className="text-gray-600">Total Employees</div>
+                    <div className="text-gray-600">Total ID Cards</div>
                 </div>
                 <div className="bg-white rounded-xl p-4 shadow-md text-center">
-                    <div className="text-3xl font-bold text-green-600">{users.filter(u => u.partner).length}</div>
-                    <div className="text-gray-600">With Partners</div>
+                    <div className="text-3xl font-bold text-green-600">{users.length}</div>
+                    <div className="text-gray-600">Active Students</div>
                 </div>
                 <div className="bg-white rounded-xl p-4 shadow-md text-center">
                     <div className="text-3xl font-bold text-purple-600">100%</div>
@@ -70,7 +70,7 @@ const Home = () => {
                     <svg className="w-5 h-5 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"></path>
                     </svg>
-                    Employee Directory
+                    Student Directory
                 </h2>
 
                 {filteredUsers.length === 0 ? (
@@ -78,7 +78,7 @@ const Home = () => {
                         <svg className="w-12 h-12 mx-auto text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
-                        <h3 className="mt-4 text-lg font-medium text-gray-900">No employees found</h3>
+                        <h3 className="mt-4 text-lg font-medium text-gray-900">No records found</h3>
                         <p className="mt-2 text-gray-500">Try adjusting your search term or check the spelling.</p>
                     </div>
                 ) : (
@@ -140,8 +140,8 @@ const Home = () => {
 
             {/* Footer */}
             <div className="mt-10 text-center text-sm text-gray-500 flex flex-col items-center">
-                <p>Secure Employee Verification System • {new Date().getFullYear()}</p>
-                <p className="text-xs mt-1 pb-4">Powered by Couples Tech</p>
+                <p>Digital ID Card Verification System • {new Date().getFullYear()}</p>
+                <p className="text-xs mt-1 pb-4">College Mini Project • Digital ID Card</p>
             </div>
         </div>
     );

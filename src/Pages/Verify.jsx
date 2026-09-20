@@ -98,11 +98,11 @@ const Verify = () => {
                                 <h2
                                     className="text-center text-sm md:text-base font-semibold tracking-[0.15em] mb-3 uppercase bg-gradient-to-r from-blue-300 to-blue-500 bg-clip-text text-transparent"
                                 >
-                                    Secure Identity by <br />
+                                    Digital ID Card <br />
                                     <span
                                         className="font-[Open_Sans,sans-serif]   text-[oklch(0.85_0.35_147.02)] text-2xl md:text-4xl bg-clip-text drop-shadow-lg tracking-wide"
                                     >
-                                        Couples Tech
+                                        College Mini Project
                                     </span>
 
 
@@ -165,7 +165,7 @@ const Verify = () => {
                                     transition={{ duration: 0.4, delay: 0.4 }}
                                     className="flex items-center mt-3 bg-white/20 rounded-full px-4 py-1 backdrop-blur-sm"
                                 >
-                                    <span className="text-white text-sm font-medium">Employee ID: {user.id}</span>
+                                    <span className="text-white text-sm font-medium">Digital ID: {user.id}</span>
                                 </motion.div>
                             </div>
                         </div>
@@ -204,7 +204,7 @@ const Verify = () => {
                                     transition={{ duration: 0.4, delay: 0.5 }}
                                     className="bg-green-50 p-4 rounded-lg border border-green-100 hover:shadow-md"
                                 >
-                                    <div className="text-xs font-semibold text-green-700 uppercase tracking-wider mb-1">Company Name</div>
+                                    <div className="text-xs font-semibold text-green-700 uppercase tracking-wider mb-1">College / Institution</div>
                                     <div className="text-sm md:text-lg font-medium text-gray-900">{user.companyName || "N/A"}</div>
                                 </motion.div>
 
@@ -378,7 +378,7 @@ const Verify = () => {
                                         clipRule="evenodd"
                                     ></path>
                                 </svg>
-                                SecureID by Couples Tech | Secured with advanced encryption
+                                Digital ID Card Verification System | Secured with advanced encryption
                             </p>
                         </motion.div>
                     </motion.div>
